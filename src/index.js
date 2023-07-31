@@ -8,25 +8,27 @@ const numberCount = document.querySelector('[data-testid="number-count"]');//
 const numberSum = document.querySelector('[data-testid="number-sum"]');//
 const wordLengthAverage = document.querySelector('[data-testid="word-length-average"]');//
 
-userInput.addEventListener('keyup', () => {
+userInput.addEventListener('keyup', calcular);
+function calcular() {
   const text = userInput.value;
-  const words = text.match(/\b\w+\b/g) || [].length;
-  const charactersNoSpaces = text.replace(/\s/g, '').length;
-  const numbers = text.match(/\d+/g) || [];
-  const numbersSum = numbers.reduce((acc, num) => acc + parseInt(num), 0);
+  //const words = text.match(/\b\w+\b/g).length;
+  //const numbers = text.match(/\d+/g) || [];
+  //const numbersSum = text.split('').reduce((acc, num) => acc + parseInt(num), 0);
   /*
+  const charactersNoSpaces = text.trim().length;
   const characters= text.length;
+  const words = text.split(' ');
   const wordLengths = words.map(word => word.length);
-  const wordLengthsSum = wordLengths.reduce((acc, len) => acc + len, 0);
-  const wordLengthsAverage = wordLengths.length ? (wordLengthsSum / wordLengths.length).toFixed(2) : 0;
+  const wordlengthsSum = wordLengths.reduce((acc, len) => acc + len, 0);
+  const wordLengthsAverage = wordLengths.length ? (wordlengthsSum / wordLengths.length).toFixed(2) : 0;
 */
-  wordCount.textContent = `Recuento de palabras: ${analyzer.getCharacterCount(words)}`;
+  wordCount.textContent = `Recuento de palabras: ${analyzer.getCharacterCount(text)}`;
   characterCount.textContent = `Recuento de caracteres: ${analyzer.getCharacterCount(text)}`;
-  characterNoSpacesCount.textContent = `Recuento de caracteres sin espacio: ${charactersNoSpaces}`;
-  numberCount.textContent = `Recuento de números: ${numbers.length}`;
-  numberSum.textContent = `Suma total de números: ${numbersSum}`;
-  wordLengthAverage.textContent = `Promedio longitud: ${analyzer.getAverageWordLength(words)}`;
-});
+  characterNoSpacesCount.textContent = `Recuento de caracteres sin espacio: ${analyzer.getCharacterCountExcludingSpaces(text)}`;
+  numberCount.textContent = `Recuento de números: ${analyzer.getNumberCount(text)}`;
+  numberSum.textContent = `Suma total de números: ${analyzer.getNumberSum(text)}`;
+  wordLengthAverage.textContent = `Promedio longitud: ${analyzer.getAverageWordLength(text)}`;
+}
 
 const resetButton = document.getElementById('reset-button');
 resetButton.addEventListener('click', () => {   // Obtener el contenido de las métricas
@@ -37,9 +39,11 @@ resetButton.addEventListener('click', () => {   // Obtener el contenido de las m
   const numberSumText = numberSum.textContent;
   const wordLengthAverageText = wordLengthAverage.textContent;
 
+
   let modificarMetricas = false;// Variable para indicar si alguna métrica ha sido modificada
 
   // Reiniciar las métricas solo si no están vacías (es decir, diferentes de los valores iniciales)
+  
   if (wordCountText !== 'Recuento de palabras:') {
     wordCount.textContent = 'Recuento de palabras:';
     modificarMetricas = true;

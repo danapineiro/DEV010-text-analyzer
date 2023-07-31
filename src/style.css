@@ -8,8 +8,8 @@ header {
     padding: -10%;
     margin-top: 5px;
     border-style: dotted;
-    margin-right: 400px;
-    margin-left: 400px;
+    margin-right: 500px;
+    margin-left: 500px;
     color: white;
 }
 footer {
@@ -21,16 +21,16 @@ footer {
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 20cm;
     padding: -10%;
-    margin-right: 300px;
-    margin-left: 300px;
+    margin-right: 500px;
+    margin-left: 500px;
     color: white;
 }
 .estiloLi {
     display: inline;
-    margin: 0 0 0 20px;
+    margin: 0 0 0 55px;
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
+    font-size:90%;
     text-align: center;
     padding: 0px;
     background-color:#FDCEDF;
@@ -38,7 +38,8 @@ footer {
     border-radius: 20px;
     border-style:groove;
     width:150px;
-    height:50px;
+    height:150px;
+   
     /*
     
     padding-top: 20px;
@@ -60,7 +61,7 @@ textarea[name="user-input"] {
     padding-right: 10;
     margin: auto auto;
     width: 500px;
-    height: 200px;
+    height: 150px;
     display: block;
 
 }
@@ -71,6 +72,7 @@ textarea[name="user-input"] {
     font-size:10px;
     font-family:Arial, Helvetica, sans-serif;
     font-weight:bold;
+    font-size: medium;
     color:white;
     border:20px;
     border-radius: 20px;
@@ -89,7 +91,7 @@ textarea[name="user-input"] {
 body {
     background-color:#F9F5F6;
 }
-
+/*
 .p {
     color: rgb(12, 12, 12);
     font-size: large;
