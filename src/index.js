@@ -22,7 +22,7 @@ function calcular() {
   const wordlengthsSum = wordLengths.reduce((acc, len) => acc + len, 0);
   const wordLengthsAverage = wordLengths.length ? (wordlengthsSum / wordLengths.length).toFixed(2) : 0;
 */
-  wordCount.textContent = `Recuento de palabras: ${analyzer.getCharacterCount(text)}`;
+  wordCount.textContent = `Recuento de palabras: ${analyzer.getWordCount(text)}`;
   characterCount.textContent = `Recuento de caracteres: ${analyzer.getCharacterCount(text)}`;
   characterNoSpacesCount.textContent = `Recuento de caracteres sin espacio: ${analyzer.getCharacterCountExcludingSpaces(text)}`;
   numberCount.textContent = `Recuento de números: ${analyzer.getNumberCount(text)}`;
