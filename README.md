@@ -26,8 +26,11 @@ Esta app de análisis de textos ofrece a los usuarios información sobre el text
 Demo
 
 **Imagen**
+
 <a href="https://ibb.co/2ZBst0F"><img src="https://i.ibb.co/dmyL2sf/Analizador-de-texto-Dariana.jpg" alt="Analizador-de-texto-Dariana" border="0"></a>
+
 **Video**
+
 <div>
     <a href="https://www.loom.com/share/7e277fe8e29443d4a1a0c08721fa5044">
       <p>Analizador de texto </p>
