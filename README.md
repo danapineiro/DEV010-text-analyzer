@@ -45,7 +45,9 @@ Este proyecto consta de 4 documentos principales.
 **index.html,  index.js, style.css y analyzer.js.**
 
 ## 4. Características de cada función.
+
 **Analyzer.js**
+
 analyzer.getWordCount(text): esta función retorna el recuento de palabras que se encuentren en el área de texto.
 
 analyzer.getCharacterCount(text): esta función retorna el recuento de caracteres que se encuentran en el área de texto, incluyendo espacios y signos de puntuación.
